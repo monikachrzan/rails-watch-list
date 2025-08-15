@@ -1,5 +1,10 @@
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="card-category m-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.shermanstravel.com/airfare-deal-pages/aerial-view-of-tokyo-cityscape-with-fuji-mountain-in-japan-picture-id1131743616.jpg)">
+  Create a New List
+</div>
+<div class = "form_category">
+  <%= simple_form_for @list do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</div>

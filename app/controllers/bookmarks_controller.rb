@@ -17,11 +17,10 @@ class BookmarksController < ApplicationController
 
   def destroy
     @bookmark = Bookmark.find(params[:id])
-    @list = List.find(params[:list_id])
     if @bookmark.destroy
-      redirect_to list_path(@list)
+      redirect_to list_path(@bookmark.list)
     else
-      render 'lists/show', status: :unprocessable_content
+      render 'lists/show', status: :see_other
     end
   end
 
